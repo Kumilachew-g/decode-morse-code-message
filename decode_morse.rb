@@ -16,3 +16,13 @@ def decode_word(word)
     end
     last_word
   end
+
+def decode_morse_code_sentence(sentence)
+    final_sentence = ''
+    sentence = sentence.split(/   /)
+    sentence.each do |word|
+      final_sentence += decode_word(word)
+      final_sentence += ' '
+    end
+    final_sentence
+end
