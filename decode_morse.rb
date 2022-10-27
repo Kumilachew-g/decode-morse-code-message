@@ -1,5 +1,5 @@
 def decode_char(char)
-chars_to_morse_message = {
+  chars_to_morse_message = {
     '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F',
     '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L',
     '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P', '--.-' => 'Q', '.-.' => 'R',
@@ -10,21 +10,21 @@ chars_to_morse_message = {
 end
 
 def decode_word(word)
-    last_word = ''
-    word.split(/ /).each do |char|
-      last_word += decode_char(char)
-    end
-    last_word
+  last_word = ''
+  word.split(/ /).each do |char|
+    last_word += decode_char(char)
   end
+  last_word
+end
 
 def decode_morse_code_sentence(sentence)
-    final_sentence = ''
-    sentence = sentence.split(/   /)
-    sentence.each do |word|
-      final_sentence += decode_word(word)
-      final_sentence += ' '
-    end
-    final_sentence
+  final_sentence = ''
+  sentence = sentence.split(/   /)
+  sentence.each do |word|
+    final_sentence += decode_word(word)
+    final_sentence += ' '
+  end
+  final_sentence
 end
 
 puts decode_morse_code_sentence('-- -.--   -. .- -- .')
