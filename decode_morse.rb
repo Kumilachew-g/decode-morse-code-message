@@ -8,3 +8,11 @@ chars_to_morse_message = {
   }
   chars_to_morse_message[char]
 end
+
+def decode_word(word)
+    last_word = ''
+    word.split(/ /).each do |char|
+      last_word += decode_char(char)
+    end
+    last_word
+  end
