@@ -26,3 +26,8 @@ def decode_morse_code_sentence(sentence)
     end
     final_sentence
 end
+
+puts decode_morse_code_sentence('-- -.--   -. .- -- .')
+# MY NAEME
+puts decode_morse_code_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+# A BOX FULL OF RUBIES
